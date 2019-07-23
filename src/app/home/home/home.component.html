@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4" *ngFor="let item of book$ | async ">
+    <div class="col-md-4" *ngFor="let item of book">
       <app-product-book [book]="item"></app-product-book>  
     </div>  
   </div>
