@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksService } from 'src/app/core/services/api/books.service';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
-
+  public book$: any = {};
+  constructor(private books: BooksService) { this.book$ = books.getList(); }
   ngOnInit() {
   }
 

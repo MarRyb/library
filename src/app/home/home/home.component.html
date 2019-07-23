@@ -1,3 +1,7 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of book$ | async ">
+      <app-product-book [book]="item"></app-product-book>  
+    </div>  
+  </div>
+</div>
