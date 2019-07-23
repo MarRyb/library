@@ -1,11 +1,17 @@
 <app-header></app-header>
-<div class="container">
+<div class="container-fluid">
   
-  <app-sidebar></app-sidebar>
-  <app-content>
-    <router-outlet></router-outlet>
-  </app-content>
-  <app-footer></app-footer>
+  <div class="row">
+    <div class="col-md-2 sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-10">
+      <app-content>
+        <router-outlet></router-outlet>
+      </app-content>
+    </div>
+  </div>
 </div>
+<app-footer></app-footer>
 
 
